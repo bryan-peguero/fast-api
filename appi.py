@@ -3,10 +3,10 @@ import uvicorn
 import json
 import random
 
-#Inicializando la API
+#Init API
 app = FastAPI()
 
-#Ruta
+#Route
 @app.get('/')
 def leer_ruta(name: str = "Default", lname: str = "Default", tl: int = "Default", country: str = "Default", sex: str = "Default"):
     return {"id": random.randint(0, 1000),
