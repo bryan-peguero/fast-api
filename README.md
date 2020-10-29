@@ -1,2 +1,4 @@
 # firstfastapi
-My first Fast API in Python
+******                                          ******
+      This is my first time doing a Rest Api (:
+******                                          ******
