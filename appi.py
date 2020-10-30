@@ -1,8 +1,14 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 import json
 import uvicorn
 import random
 
+class Product(BaseModel):
+    name: str
+    price: int
+    description: str
+    in_stock: int
 
 #Init API
 app = FastAPI()
@@ -23,8 +29,8 @@ def get_Product(product_name):
 
 #POST a product
 @app.post('/products/{product_name}')
-def post_Product():
-    products.append()
+def post_Product(product: Product):
+    products.append(product.dict())
     return {'Product added succesfully': products}
 
 if __name__ == '_main_':
