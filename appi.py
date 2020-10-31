@@ -13,7 +13,7 @@ class Product(BaseModel):
 #Init API
 app = FastAPI()
 
-#Import the file products
+#Import all the things that are in the list of products
 from products import products
 
 #Route
